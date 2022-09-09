@@ -27,19 +27,19 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center justify-center">
-            <img className="h-6 lg:h-8" src={Logo} alt="logo" />
-            <span className="text-white font-extrabold text-2xl">
+            <img className="h-12 lg:h-12" src={Logo} alt="logo" />
+            <span className="logo">
               L<span className="text-primary">foods</span>
             </span>
           </Link>
 
           {/* nav */}
           <nav className="hidden lg:flex">
-            <ul className="lg:flex lg:gap-x-12 text-xl hover:text-primary">
+            <ul className="lg:flex lg:gap-x-12">
               {Menu.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={item.path} className="capitalize text-white">
+                    <Link to={item.path} className="capitalize text-3xl hover:text-primary text-white">
                       {item.name}
                     </Link>
                   </li>
@@ -50,14 +50,14 @@ const Navbar = () => {
           <div className="flex gap-x-8 items-center justify-center text-white">
             <div
               onClick={() => setMobileNav(!mobileNav)}
-              className="lg:hidden text-2xl lg:text-3xl text-white cursor-pointer hover:rotate-[360deg] hover:bg-primary rounded-full p-2"
+              className="lg:hidden text-3xl text-white cursor-pointer hover:rotate-[360deg] hover:bg-primary rounded-full p-3"
             >
               {mobileNav ? <CgClose /> : <CgMenuRight />}
             </div>
-            <div className="text-xl md:text-2xl p-2 rounded-full hover:bg-primary text-center hover:rotate-[360deg]">
+            <div className="text-3xl p-3 rounded-full hover:bg-primary text-center hover:rotate-[360deg]">
               <FaShoppingCart />
             </div>
-            <div className="text-xl md:text-2xl p-2 rounded-full hover:bg-primary text-center hover:rotate-[360deg]">
+            <div className="text-3xl p-3 rounded-full hover:bg-primary text-center hover:rotate-[360deg]">
               <BsHeartFill />
             </div>
           </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
           <div
             className={`${
               mobileNav ? "left-0" : "-left-full"
-            } lg:hidden fixed bottom-0 w-full max-w-[18rem] h-screen transition-all`}
+            } lg:hidden fixed bottom-0 w-2/4 h-screen transition-all`}
           >
             <NavMobile />
           </div>

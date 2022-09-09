@@ -36,6 +36,9 @@ module.exports = {
       dropShadow: {
         primary: "0 .5rem 1.5rem rgba(0, 0, 0, .1",
       },
+      letterSpacing: {
+        widest: ".1rem",
+      },
     },
   },
   plugins: [],

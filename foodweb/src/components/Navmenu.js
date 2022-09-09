@@ -23,4 +23,8 @@ export const Menu = [
   path: '/',
   name: 'contact',
  },
+ {
+  path: '/profile',
+  name: 'profile',
+ },
 ]
