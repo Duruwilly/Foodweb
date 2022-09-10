@@ -1,6 +1,6 @@
 import React from "react";
 import TypeIt from "typeit-react";
-import Button from "./Button";
+import { HeroButton } from "./Button";
 import { Link } from "react-router-dom";
 
 const Heroe = () => {
@@ -20,7 +20,7 @@ const Heroe = () => {
           </span>
         </h1>
         <Link to="/order">
-          <Button title="ORDER NOW" />
+          <HeroButton title="ORDER NOW" />
         </Link>
       </div>
     </section>

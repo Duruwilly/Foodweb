@@ -160,13 +160,14 @@ header .logo {
   color: var(--color-primary);
 }
 
-.row .content .icons-container .icons .icon span {
+.span {
   font-size: 1.5rem;
+
 }
 
 /* special dish section */
 
-.special-dish .special-slider .slide {
+ .slide {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -174,39 +175,31 @@ header .logo {
   padding-top: 9rem;
 }
 
-.image img {
+.slide .image img {
   height: 50rem;
   width: 50rem;
   border-radius: 50%;
 }
 
-.image img {
-  width: 100%
-}
-
-.special-dish .special-slider .slide .content {
+ .slide .content {
   flex: 1 1 45rem;
 }
 
-.special-dish .special-slider .slide .image {
+ .slide .image {
   flex: 1 1 45rem;
 }
 
-.special-dish .special-slider .slide .image img {
-  width: 100%;
-}
-
-.special-dish .special-slider .slide .content span {
+ .slide .content span {
   color: var(--color-primary);
   font-size: 2.5rem;
   font-family: var(--title-font);
 }
 
-.special-dish .special-slider .slide .content h3 {
+ .slide .content h3 {
   font-size: 7rem;
 }
 
-.special-dish .special-slider .slide .content p {
+ .slide .content p {
   color: var(--color-light);
   font-size: 2.2rem;
   padding: .5rem 0;
@@ -232,31 +225,31 @@ header .logo {
   border: 3px solid var(--color-primary);
 }
 
-.swiper-pagination-bullet-active {
+.slider .swiper-pagination-bullet {
   background: var(--color-primary);
 }
 
 /* menu section */
 
-.images .shop-item-image {
+.shop-item-image {
   height: 30rem;
   width: 36rem;
 }
 
-.menu .box-container {
+.box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
 }
 
-.menu .box-container .box {
+ .box {
   background: var(--color-white);
   border: .1rem solid rgba(0, 0, 0, .2);
   border-radius: .5rem;
   box-shadow: var(--box-shadow);
 }
 
-.menu .box-container .box .images {
+.box .images {
   height: 25rem;
   width: 100%;
   padding: 1.5rem;
@@ -264,53 +257,58 @@ header .logo {
   position: relative;
 }
 
-.menu .box-container .box .images .shop-item-image {
+.box .images .shop-item-image {
   height: 100%;
   width: 100%;
   border-radius: .5rem;
   object-fit: cover;
 }
 
-.menu .box-container .box .images .fa-heart {
+.faHeart {
   position: absolute;
-  border: none;
-  cursor: pointer;
   top: 2.5rem;
   right: 2.5rem;
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  font-size: 2rem;
-  background: var(--color-white);
-  border-radius: 50%;
-  color: var(--color-primary);
 }
 
-.menu .box-container .box .images .fa-heart:hover {
+.heart-btn {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background: var(--color-white);
+  padding: 0;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--color-primary)
+}
+
+.box .images .heart-btn:hover {
   background: var(--color-primary);
   color: var(--color-white);
 }
 
-.menu .box-container .box .content {
+.box .content {
   padding: 2rem;
   padding-top: 0;
 }
 
-.menu .box-container .box .content .stars {
+ .box .content .stars {
+  display: inline-flex;
   padding-bottom: 1rem;
 }
 
-.menu .box-container .box .content .stars i {
+.box .content .stars .star {
   font-size: 1.7rem;
   color: var(--color-primary);
 }
 
-.menu .box-container .box .content .shop-item-title {
+.box .content .shop-item-title {
   font-size: 2.5rem;
 }
 
-.menu .box-container .box .content p {
+.box .content p {
   color: var(--color-light);
   font-size: 1.6rem;
   padding: .5rem 0;
@@ -336,7 +334,7 @@ header .logo {
   border: 3px solid var(--color-primary);
 }
 
-.menu .box-container .box .content .shop-item-price {
+ .box .content .shop-item-price {
   color: var(--color-primary);
   margin-left: 1rem;
   font-size: 2.5rem;
@@ -493,7 +491,7 @@ header .logo {
 
 /* customer review start */
 
-.review .slide {
+.review-slide {
   padding: 2rem;
   box-shadow: var(--box-shadow);
   border: .1rem solid rgba(0, 0, 0, .2);
@@ -502,7 +500,7 @@ header .logo {
 
 }
 
-.review .slide .fa-quote-right {
+.review-slide .quote {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -510,32 +508,37 @@ header .logo {
   color: #ccc;
 }
 
-.review .slide .user {
+.review-slide .user {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   padding-bottom: 1.5rem;
 }
 
-.review .slide .user img {
+.review-slide .user img {
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.review .slide .user h3 {
+.review-slide .user h3 {
   font-size: 2rem;
   padding-bottom: .5rem;
+  text-transform: capitalize;
 }
 
-.review .slide .user i {
-  font-size: 1.3rem;
+.review-slide .user .stars {
+  display: flex;
+}
+
+.review-slide .user .stars .star {
+  font-size: 1.7rem;
   color: var(--color-primary);
 }
 
-.review .slide p {
-  font-size: 1.5rem;
+.review-slide p {
+  font-size: 1.8rem;
   line-height: 1.8;
   color: var(--color-light);
 }

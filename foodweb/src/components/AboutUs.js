@@ -4,7 +4,7 @@ import AboutImg from '../assets/images/aboutus.jpg'
 import { MdLocalShipping } from 'react-icons/md'
 import { RiCustomerService2Fill } from 'react-icons/ri'
 import { FaDollarSign } from 'react-icons/fa'
-import Button from './Button'
+import { Button } from './Button'
 import { Link } from 'react-router-dom'
 
 const AboutUs = () => {
@@ -36,24 +36,24 @@ const AboutUs = () => {
               className="icons"
             >
               <MdLocalShipping className="icon" />
-              <span className="">swift delivery</span>
+              <span className="span">swift delivery</span>
             </div>
             <div
               className="icons"
             >
               <FaDollarSign className="icon" />
-              <span className="">easy payments</span>
+              <span className="span">easy payments</span>
             </div>
             <div
               className="icons"
               
             >
               <RiCustomerService2Fill className="icon" />
-              <span className="">excellent delivery service</span>
+              <span className="span">excellent delivery service</span>
             </div>
           </div>
           <Link to='/'>
-          <Button title='learn more' className='hover:text-black' />
+          <Button title='learn more' />
           </Link>
         </div>
       </div>
