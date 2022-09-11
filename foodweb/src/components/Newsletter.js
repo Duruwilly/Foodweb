@@ -2,9 +2,10 @@ import React from 'react'
 
 const Newsletter = () => {
   return (
-    <section className='bg-newsletter bg-fixed newsletter bg-no-repeat bg-center relative w-full'>
+    
+    <div className='bg-newsletter bg-fixed newsletter bg-no-repeat bg-center relative w-full'>
      <div className="overlay">
-      <div className="container">
+      <div className="newsletter-container">
        <h1 className='text-center text-5xl text-white font-bold'>Get the latest update from Lfoods</h1>
        <p className='text-center text-3xl text-white mt-12'>join our mailing list</p>
        <form action="">
@@ -15,7 +16,7 @@ const Newsletter = () => {
        </form>
       </div>
      </div>
-    </section>
+    </div>
   )
 }
 

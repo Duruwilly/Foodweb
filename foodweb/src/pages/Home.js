@@ -9,7 +9,7 @@ import SpecialDish from '../components/SpecialDish'
 
 const Home = () => {
   return (
-    <>
+    <div>
      <Heroe />
      <AboutUs />
      <SpecialDish />
@@ -17,7 +17,7 @@ const Home = () => {
      <Reviews />
      <Newsletter />
      <Footer />
-    </>
+    </div>
   )
 }
 
